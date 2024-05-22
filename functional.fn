@@ -55,5 +55,5 @@ F->return memoize(alias F)(F->parameters args)
 F->return function() bind(alias F, T)(T val)
 {
     foreach (field; val->fields)
-        return = curry!F(field->data);
+        return = curry!F(field->init);
 }

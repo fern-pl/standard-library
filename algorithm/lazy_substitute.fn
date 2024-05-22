@@ -49,7 +49,7 @@ public:
         return = _length;
     }
 
-    T opSlice(ptrdiff_t start, ptrdiff_t end)
+    T opSlice(nuint start, nuint end)
     {
         foreach (ref u; _range)
         {
@@ -60,7 +60,7 @@ public:
         }
     }
 
-    auto opSliceAssign(A)(A ahs, ptrdiff_t start, ptrdiff_t end) 
+    auto opSliceAssign(A)(A ahs, nuint start, nuint end) 
     {
         foreach (ref u; _range)
         {
@@ -71,7 +71,7 @@ public:
         }
     }
 
-    ref auto opIndex(ptrdiff_t index)
+    ref auto opIndex(nuint index)
     {
         foreach (ref u; _range)
         {
@@ -80,7 +80,7 @@ public:
         }
     }
 
-    auto opIndexAssign(A)(A ahs, ptrdiff_t index) 
+    auto opIndexAssign(A)(A ahs, nuint index) 
     {
         foreach (ref u; _range)
         {
